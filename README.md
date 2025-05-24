@@ -57,6 +57,9 @@ docker build --no-cache --force-rm -t docker_ueransim .
 
 ```bash
 source .env
+# For 4G deployment only
+docker compose -f 4g-volte-deploy.yaml build
+
 # For 5G deployment only
 docker compose -f sa-deploy.yaml build
 ```
