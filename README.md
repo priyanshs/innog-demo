@@ -57,16 +57,10 @@ docker build --no-cache --force-rm -t docker_ueransim .
 
 ```bash
 source .env
-# For 4G deployment only
-docker compose -f 4g-volte-deploy.yaml build
-
-# For 5G deployment only
 docker compose -f sa-deploy.yaml build
 ```
 
 ## Network and deployment configuration
-
-### Single Host setup configuration
 
 Edit only the following parameters in **.env** as per your setup
 
@@ -78,9 +72,8 @@ DOCKER_HOST_IP --> This is the IP address of the host running your docker setup
 
 ## Network Deployment
 
-###### 5G SA deployment
-
 ```bash
+source .env
 # 5G Core Network
 docker compose -f sa-deploy.yaml up
 
