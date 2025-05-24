@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # BSD 2-Clause License
 
