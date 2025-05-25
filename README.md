@@ -78,10 +78,10 @@ source .env
 docker compose -f sa-deploy.yaml up
 
 # UERANSIM gNB (RF simulated)
-docker compose -f nr-gnb.yaml up -d && docker container attach nr_gnb
+docker compose -f nr-gnb.yaml up 
 
 # UERANSIM NR-UE (RF simulated)
-docker compose -f nr-ue.yaml up -d && docker container attach nr_ue
+docker compose -f nr-ue.yaml up 
 ```
 
 ## Provisioning of SIM information
