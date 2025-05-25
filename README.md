@@ -86,7 +86,7 @@ docker compose -f nr-ue.yaml up
 
 ## Provisioning of SIM information
 
-### Provisioning of SIM information in open5gs HSS as follows
+### Provisioning of SIM information in open5gs UDM as follows
 
 Open (http://<DOCKER_HOST_IP>:9999) in a web browser, where <DOCKER_HOST_IP> is the IP of the machine/VM running the open5gs containers. Login with following credentials
 
