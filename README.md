@@ -116,4 +116,4 @@ sudo curl --interface uesimtun0 google.com
 ```
 
 
-The presentation is made available here : [INOC_Demo.pptx](./INOC_Demo.pptx)
+The presentation is made available here : [INOC_Demo.pptx](https://docs.google.com/presentation/d/1gXPG7qudWQWjfyyaFcSHhAwZ7suJho_M/edit?usp=sharing&ouid=104199036330724640531&rtpof=true&sd=true)
