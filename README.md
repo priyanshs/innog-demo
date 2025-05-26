@@ -71,24 +71,19 @@ DOCKER_HOST_IP --> This is the IP address of the host running your docker setup
 ```
 
 ## Network Deployment
-
+### Core Network
 ```bash
 source .env
 # 5G Core Network
 docker compose -f sa-deploy.yaml up
-
-# UERANSIM gNB (RF simulated)
-docker compose -f nr-gnb.yaml up 
-
-# UERANSIM NR-UE (RF simulated)
-docker compose -f nr-ue.yaml up 
 ```
+
 
 ## Provisioning of SIM information
 
 ### Provisioning of SIM information in open5gs UDM as follows
 
-Open (http://<DOCKER_HOST_IP>:9999) in a web browser, where <DOCKER_HOST_IP> is the IP of the machine/VM running the open5gs containers. Login with following credentials
+Open http://localhost:9999 in a web browser. Login with following credentials
 
 ```
 Username : admin
@@ -102,3 +97,23 @@ Using Web UI, add a subscriber
 ```bash
 sudo docker exec -it webui misc/db/open5gs-dbctl add 001010123456790 8baf473f2f8fd09487cccbd7097c6862 8E27B6AF0E692E750F32667A3B14605D
 ```
+### RAN and UE Provisioning
+```bash
+# UERANSIM gNB (RF simulated)
+docker compose -f nr-gnb.yaml up 
+
+# UERANSIM NR-UE (RF simulated)
+docker compose -f nr-ue.yaml up 
+```
+
+## Logging into the UE
+```bash 
+docker exec -it nr_ue /bin/bash
+sudo apt install curl wget 
+ping -I uesimtun0 google.com
+sudo curl --interface uesimtun0 google.com
+./nr-binder {PDU-SESSION-IP-ADDRESS} {COMMAND} {ARGS}
+```
+
+
+The presentation is made available here : [INOC_Demo.pptx](./INOC_Demo.pptx)
