@@ -116,4 +116,6 @@ sudo curl --interface uesimtun0 google.com
 ```
 
 
-The presentation is made available here : [INOC_Demo.pptx](https://docs.google.com/presentation/d/1gXPG7qudWQWjfyyaFcSHhAwZ7suJho_M/edit?usp=sharing&ouid=104199036330724640531&rtpof=true&sd=true)
+The presentation is made available here: [INOC_Demo.pptx](https://drive.proton.me/urls/FN78HHDY3W#pRNJF8nNX7z6)
+
+[ ] TODO: Packet capture on this setup is difficult because docker desktop does not give direct access to the bridge. Write up needs to be added to solve this.
